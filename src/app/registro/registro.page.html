@@ -1,0 +1,147 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Formulario de Registro</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"> </ion-menu-button>
+     
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Formulario de registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="formsend()">
+        <ion-item>
+          <ion-label>Nombre: </ion-label>
+          <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Apellido: </ion-label>
+          <ion-input type="text" [(ngModel)]="apellido" name="apellido"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Edad: </ion-label>
+          <ion-input type="number" [(ngModel)]="edad" name="edad"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Tipo de Documento: </ion-label>
+
+          <ion-select
+            multiple="false"
+            placeholder="Seleccionar..."
+            cancelText="Cancelar"
+            okText="Seleccionar"
+            [(ngModel)]="t_doc"
+            name="t_doc">
+            <ion-select-option value="Cédula de Ciudadanía"
+              >Cedula de ciudadania</ion-select-option
+            >
+            <ion-select-option value="Tarjeta de Identidad"
+              >Tarjeta de identidad</ion-select-option
+            >
+            <ion-select-option value="Cédula de Extranjeria"
+              >Cedula de extranjeria</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>No. de Documento: </ion-label>
+          <ion-input type="number" [(ngModel)]="n_doc" name="n_doc"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Sexo: </ion-label>
+
+          <ion-select
+            multiple="false"
+            placeholder="Seleccionar..."
+            cancelText="Cancelar"
+            okText="Seleccionar"
+            type="text" [(ngModel)]="sexo"
+            name="sexo"
+          >
+            <ion-select-option value="Masculino">Masculino</ion-select-option>
+            <ion-select-option value="Femenino">Femenino</ion-select-option>
+            <ion-select-option value="Otro">Otro</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Teléfono: </ion-label>
+          <ion-input type="number" [(ngModel)]="telefono" name="telefono"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Correo Electrónico: </ion-label>
+          <ion-input type="text" [(ngModel)]="correo" name="correo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Dirección: </ion-label>
+          <ion-input type="text" [(ngModel)]="direccion" name="direccion"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Carrera: </ion-label>
+          <ion-select
+            multiple="false"
+            placeholder="Carrera"
+            cancelText="Cancelar"
+            okText="Seleccionar"
+            [(ngModel)]="carrera"
+            name="carrera"
+          >
+            <ion-select-option value="Ing.Mecatronica"
+              >Ing. Mecatrónica</ion-select-option
+            >
+            <ion-select-option value="Ing.Telecomunicaciones"
+              >Ing.Telecomunicaciones</ion-select-option
+            >
+            <ion-select-option value="Ing.Industrial"
+              >Ing. Industrial</ion-select-option
+            >
+            <ion-select-option value="Tec.desarrollo de Software"
+              >Tec.desarrollo de software</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Jornada: </ion-label>
+
+          <ion-select
+            multiple="false"
+            placeholder="Seleccionar..."
+            cancelText="Cancelar"
+            okText="Seleccionar"
+            [(ngModel)]="jornada"
+            name="jornada"
+          >
+            <ion-select-option value="Diurna">Diurna</ion-select-option>
+            <ion-select-option value="Nocturna">Nocturna</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-button type="submit" expand="block" >Enviar</ion-button>
+      </form>
+    </ion-card-content>
+<!-- 
+    <ion-item>
+      <ion-button (click)="takePicture()">Tomar Foto</ion-button>
+      <img *ngIf="image" [src]="image">
+    </ion-item> -->
+  </ion-card>
+
+  
+</ion-content>

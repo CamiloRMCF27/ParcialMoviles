@@ -1,3 +1,51 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+    <ion-menu side="start"  menuId="menu1" contentId="main">
+      <ion-content>
+      <div class="menu-header-bg"> </div>
+       <div class="header-content">
+
+          <img src="https://i.pinimg.com/originals/19/87/90/198790eb7e08830027c1ae1686496c72.png" alt="">
+          <ion-label>
+            <h1>Menu</h1>
+          </ion-label>
+
+       </div>
+      
+        <ion-list menu="menu-items" lines="none">
+          <ion-menu-toggle> 
+            <ion-item routerLink="/home"><ion-icon slot="start" name="home-outline"></ion-icon>Inicio</ion-item>
+          </ion-menu-toggle> 
+          <ion-menu-toggle class="active"> 
+            <ion-item routerLink="/registro"><ion-icon  slot="start" name="document-text-outline"></ion-icon>Registrate</ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle> 
+            <ion-item routerLink="/ingreso"><ion-icon slot="start" name="person-outline"></ion-icon>Ingreso</ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle> 
+            <ion-item routerLink="/creditos"><ion-icon slot="start" name="newspaper-outline"></ion-icon>Créditos</ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+     
+      <ion-button class="btn_salir" color="primary" mode="ios" expand="block" fill="outline" >Salir</ion-button>
+    </ion-content>
+    </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+
+  
+
+
+
+
+
+
+
+
+
+ 
+
+
 </ion-app>
+
